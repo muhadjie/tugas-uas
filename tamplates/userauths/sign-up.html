@@ -1,0 +1,35 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Register</title>
+    <link rel="stylesheet" href="{% static 'assets/css/signup.css' %}"> <!-- Sesuaikan nama file jika berbeda -->
+</head>
+<body>
+    <div class="container">
+        <!-- Bagian kiri -->
+        <div class="left-section">
+            <h2>Mission to Deep Space</h2>
+            <div class="icon">🌌</div> <!-- Ganti dengan ikon SVG atau gambar -->
+            <p>The Future Is Here</p>
+        </div>
+      
+        <!-- Bagian kanan -->
+        <div class="right-section">
+            <h1>Sign Up</h1>
+            <form method="POST">
+                {% csrf_token %}
+                {{ form.username }}
+                {{ form.email }}
+                {{ form.password1 }}
+                {{ form.password2 }}
+                
+                <button type="submit">Join</button>
+            </form>
+        </div>
+    </div>
+</body>
+</html>

@@ -1,0 +1,47 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+    <link rel="stylesheet" href="{% static 'assets/css/login.css' %}">
+</head>
+<body>
+    <div class="container">
+        <div class="left-section">
+            <h2>Mission to Deep Space</h2>
+            <div class="icon">🌌</div> <!-- Ganti dengan ikon SVG atau gambar yang sesuai -->
+            <p>The Future Is Here</p>
+        </div>
+
+        <div class="right-section">
+            <h1>Login</h1>
+            <form method="post">
+                {% csrf_token %}
+                <div class="form-group">
+                    {{ form.username }}
+                </div>
+                <div class="form-group">
+                    {{ form.password }}
+                </div>
+                <button type="submit">Login</button>
+            </form>
+            
+            {% if messages %}
+                <ul class="messages">
+                    {% for message in messages %}
+                        <li>{{ message }}</li>
+                    {% endfor %}
+                </ul>
+            {% endif %}
+
+            <!-- Tombol untuk Sign Up jika belum memiliki akun -->
+            <div class="signup-link">
+                <a href="{% url 'sign-up' %}" class="signup-button">Daftar Sekarang</a>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

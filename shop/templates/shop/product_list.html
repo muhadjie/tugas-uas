@@ -1,0 +1,49 @@
+{% extends 'partials/base.html' %} {% load static %} {% block content %}
+<div class="container">
+  <h1 class="text-center mb-4">Rental Products</h1>
+
+  <!-- Cart Button -->
+  <div class="text-end mb-4">
+    <a
+      href="{% url 'shop:view_cart' %}"
+      class="btn btn-primary btn-lg"
+      style="border-radius: 20px"
+    >
+      🛒 View Cart
+    </a>
+  </div>
+
+  <!-- Product List -->
+  <div class="row">
+    {% for product in products %}
+    <div class="col-md-4 mb-4">
+      <div class="card">
+        {% if product.image %}
+        <img
+          src="{{ product.image.url }}"
+          class="card-img-top"
+          alt="{{ product.name }}"
+        />
+
+        {% endif %}
+        <div class="card-body">
+          <h5 class="card-title">{{ product.name }}</h5>
+          <p class="card-text">
+            <strong>Category:</strong> {{ product.category.name }}<br />
+            <strong>Price:</strong> Rp. {{ product.daily_rental_price }}
+          </p>
+        </div>
+        <div class="card-footer text-center">
+          <a
+            href="{% url 'shop:add_to_cart' product.id %}"
+            class="btn btn-success"
+          >
+            Add to Cart
+          </a>
+        </div>
+      </div>
+    </div>
+    {% endfor %}
+  </div>
+</div>
+{% endblock %}

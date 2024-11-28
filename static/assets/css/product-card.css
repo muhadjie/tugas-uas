@@ -1,0 +1,121 @@
+/* Grid layout */
+.container .row {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); /* Responsif */
+  gap: 16px; /* Jarak antar card */
+  margin: 0 auto;
+  padding: 16px;
+  justify-content: center;
+}
+
+/* Card style */
+.card {
+  background-color: #fff;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  max-width: 200px; /* Ukuran card maksimal */
+  margin: 0 auto;
+}
+
+.card:hover {
+  transform: scale(1.05);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+}
+
+/* Image style */
+.card-img-top {
+  height: 150px; /* Gambar lebih kecil */
+  object-fit: cover; /* Sesuaikan gambar */
+  border-bottom: 1px solid #ddd;
+  width: 100%;
+}
+
+/* Card content */
+.card-body {
+  padding: 12px;
+  text-align: center;
+}
+
+.card-body .card-title {
+  font-size: 1rem;
+  font-weight: bold;
+  color: #333;
+  margin-bottom: 8px;
+}
+
+.card-body .card-text {
+  font-size: 0.85rem;
+  color: #555;
+}
+
+/* Footer style */
+.card-footer {
+  padding: 8px;
+  background-color: #f8f9fa;
+  border-top: 1px solid #ddd;
+  text-align: center;
+}
+
+.card-footer .btn {
+  background-color: #007bff;
+  color: #fff;
+  padding: 6px 12px;
+  font-size: 0.85rem;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.card-footer .btn:hover {
+  background-color: #0056b3;
+}
+
+.btn-primary {
+  background-color: #007bff;
+  border: none;
+  transition: background-color 0.3s ease;
+  text-decoration: none;
+  color: white;
+  padding: 8px;
+}
+
+.btn-primary:hover {
+  background-color: #0056b3;
+}
+
+.btn-success {
+  background-color: #28a745;
+  border: none;
+  transition: background-color 0.3s ease;
+  text-decoration: none;
+  color: white;
+  padding: 8px;
+}
+
+.btn-success:hover {
+  background-color: #218838;
+}
+
+.table {
+  margin-top: 20px;
+  border-collapse: collapse;
+  width: 100%;
+  margin-bottom: 20px;
+}
+
+.table-bordered {
+  border: 1px solid #dee2e6;
+}
+
+.table-dark th {
+  background-color: #343a40;
+  color: #fff;
+  text-align: center;
+}

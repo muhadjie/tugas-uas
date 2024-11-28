@@ -1,0 +1,22 @@
+sore kak , sebelumnya saya minta maaf kak tidak bisa melanjutkan tugas website kakak , saya minta maaf kak dikarenakan ada keperluan yang sangant penting kak untuk 5 hari kedepan saya harus keluar kota kak
+
+untuk tugas nya progres saya sudah sekitar 70% kakak , detail lengkap progresnya yang sudah saya kerjakan:
+- env sudah dibuat
+- setting database
+- sudah bisa migrate database
+- user dashboard
+- admin dashboard
+- login page
+- logout page
+- sign up page
+- foot dan header sudah ada
+- sudah ada superuser (admin)
+- logic untuk user sign,login,dan logut sudah bisa
+- sudah membuat modul untuk produk barangnya
+- dan sudah buat modul untuk produk category barang
+- fuction view, model,admin,userauths tamplates dll sudah ada
+- CRUD pada admin dashboard
+ note : sebagian besar bagian backend sudah berhasil saya buatkak , paling untuk tampilan frontend yang belumkak
+		kakak tinggal tambah kan product card saja dan logic shopchart untuk backendnya
+		
+sekali lagi saya mohon maaf ya kak , nnti saya langsung kirim saja sourcecodenya biar kakak bisa melanjutkan

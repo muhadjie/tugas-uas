@@ -1,0 +1,112 @@
+/* Mengatur tampilan dasar untuk body dan container utama */
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    background-color: #121212;
+    font-family: Arial, sans-serif;
+}
+
+.container {
+    display: flex;
+    width: 800px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.5);
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+/* Bagian kiri untuk informasi visual */
+.left-section {
+    background-color: #000;
+    color: #ffffff;
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+    text-align: center;
+}
+
+.left-section h2 {
+    font-size: 24px;
+    margin-bottom: 10px;
+}
+
+.left-section p {
+    font-size: 14px;
+    color: #b3b3b3;
+}
+
+.left-section .icon {
+    font-size: 60px;
+    color: #00bcd4;
+    margin: 20px 0;
+}
+
+/* Bagian kanan untuk form pendaftaran */
+.right-section {
+    background-color: #0d1b1e;
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 40px;
+}
+
+.right-section h1 {
+    color: #ffffff;
+    font-size: 24px;
+    margin-bottom: 30px;
+}
+
+/* Styling untuk form */
+form {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+form input {
+    background: none;
+    border: none;
+    border-bottom: 1px solid #00bcd4;
+    margin-bottom: 20px;
+    padding: 10px;
+    color: #ffffff;
+    font-size: 16px;
+}
+
+form input::placeholder {
+    color: #b3b3b3;
+}
+
+form button {
+    padding: 10px;
+    border: 1px solid #00bcd4;
+    background: none;
+    color: #00bcd4;
+    font-size: 16px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+form button:hover {
+    background-color: #00bcd4;
+    color: #ffffff;
+}
+
+/* Responsif */
+@media (max-width: 768px) {
+    .container {
+        flex-direction: column;
+        width: 90%;
+    }
+
+    .left-section, .right-section {
+        width: 100%;
+    }
+}
+
